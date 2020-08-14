@@ -13,3 +13,8 @@ In the server the server waits for a client to connect and then receives the web
 Once the address is given it parses it if needed and then gets the ip using gethostbyname
 Then it connects to the website and sends a get http request 
 It then receives the response and forwards that response back to the client
+
+If the server has already received the site recently it will have stored the site
+in it's cache and can forward the cache file to the user instead of requesting the site.
+Only 5 sites can be stored in the cache at a time.
+The server also has a blacklist for banned sites within a specificed time interval.
